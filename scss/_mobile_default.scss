@@ -1,0 +1,126 @@
+body {
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "image"
+        "text";
+    margin-bottom: 2rem;
+    //     max-width: 1440px;
+    font-family: $defaultFont;
+}
+header {
+    grid-area: header;
+    text-align: left;
+    padding: 1.75rem;
+    .logo {
+        height: auto;
+        width: 8rem;
+        z-index: 1;
+    }
+}
+.hero-image {
+    grid-area: image;
+    background-image: url(../images/hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 35vh;
+    width: auto;
+}
+.hero-text {
+    grid-area: text;
+    height: 55vh;
+    background: $lightGradient;
+    background-repeat: no-repeat;
+    padding: 5rem 2rem;
+    margin-bottom: 1rem;
+    span {
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+    }
+    & .hero-title-light {
+        color: $lightRed;
+        font-size: clamp(3rem, 4rem, 3.5rem);
+        font-weight: $fontWeightLight;
+    }
+    & .hero-title-dark {
+        color: $grayRed;
+        font-size: clamp(3rem, 4rem, 4rem);
+        font-weight: $fontWeightBold;
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+    .hero-detail-text {
+        color: $lightRed;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+    .hero-email {
+        position: relative;
+    }
+    #email-input {
+        font-size: 0.7rem;
+        text-align: left;
+        border: 1px solid $lightRed;
+        padding: 1rem;
+        border-radius: 3rem;
+        width: 100%;
+        position: relative;
+    }
+    #email-input::placeholder {
+        color: $lightRed;
+    }
+    #email-input.error {
+        border: 2px solid $softRed;
+        //    .error-ball {
+        //        position: absolute;
+        //        width: 2rem;
+        //        height: 2rem;
+        //        background-image: url(../images/icon-error.svg);
+        //        bottom: 0;
+        //        right: 0;
+        //        display: block;
+        //    }
+    }
+    #error-ball {
+        display: none;
+    }
+    #error-ball.error {
+        position: absolute;
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        background-image: url(../images/icon-error.svg);
+        background-repeat: no-repeat;
+        bottom: 0.25rem;
+        right: 4.5rem;
+    }
+    .hero-btn {
+        position: absolute;
+        background: $darkGradient;
+        height: 3rem;
+        width: 4rem;
+        border-radius: 3rem;
+        right: 0;
+        bottom: -0.04rem;
+        box-shadow: -1px 6px 20px rgba(0, 0, 0, 0.3);
+        img {
+            position: absolute;
+            height: auto;
+            width: 0.9rem;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 1.75rem;
+        }
+    }
+}
+// }
+
+.attribution {
+    font-family: $defaultFont;
+    font-weight: fontWeightLight;
+    font-size: 0.8rem;
+    text-align: center;
+}
