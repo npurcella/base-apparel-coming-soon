@@ -6,7 +6,6 @@ body {
         "image"
         "text";
     margin-bottom: 2rem;
-    //     max-width: 1440px;
     font-family: $defaultFont;
 }
 header {
@@ -57,6 +56,14 @@ header {
         line-height: 1.5;
         margin-bottom: 2rem;
     }
+    #hero-email.error::after {
+        content: "Please provide a valid email.";
+        position: absolute;
+        bottom: -26px;
+        left: 1rem;
+        font-size: 0.8rem;
+        color: $softRed;
+    }
     .hero-email {
         position: relative;
     }
@@ -72,17 +79,11 @@ header {
     #email-input::placeholder {
         color: $lightRed;
     }
+    #email-input:focus {
+        outline: 1px solid $lightRed;
+    }
     #email-input.error {
         border: 2px solid $softRed;
-        //    .error-ball {
-        //        position: absolute;
-        //        width: 2rem;
-        //        height: 2rem;
-        //        background-image: url(../images/icon-error.svg);
-        //        bottom: 0;
-        //        right: 0;
-        //        display: block;
-        //    }
     }
     #error-ball {
         display: none;
@@ -116,11 +117,9 @@ header {
         }
     }
 }
-// }
-
-.attribution {
+footer {
     font-family: $defaultFont;
-    font-weight: fontWeightLight;
+    font-weight: $fontWeightLight;
     font-size: 0.8rem;
     text-align: center;
 }

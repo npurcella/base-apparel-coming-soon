@@ -231,6 +231,15 @@ header .logo {
   margin-bottom: 2rem;
 }
 
+.hero-text #hero-email.error::after {
+  content: "Please provide a valid email.";
+  position: absolute;
+  bottom: -26px;
+  left: 1rem;
+  font-size: 0.8rem;
+  color: #f96262;
+}
+
 .hero-text .hero-email {
   position: relative;
 }
@@ -247,6 +256,10 @@ header .logo {
 
 .hero-text #email-input::placeholder {
   color: #ce9797;
+}
+
+.hero-text #email-input:focus {
+  outline: 1px solid #ce9797;
 }
 
 .hero-text #email-input.error {
@@ -288,16 +301,16 @@ header .logo {
   left: 1.75rem;
 }
 
-.attribution {
+footer {
   font-family: "Josefin Sans", sans-serif;
-  font-weight: fontWeightLight;
+  font-weight: 300;
   font-size: 0.8rem;
   text-align: center;
 }
 
 @media (min-width: 900px) {
   body {
-    grid-template-rows: auto 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr auto;
     grid-template-columns: repeat(3, 1fr);
     background-image: url(../images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
@@ -324,6 +337,13 @@ header .logo {
     padding: 10rem 8rem;
     position: relative;
     background-image: none;
+  }
+  footer {
+    grid-row: 4 / 5;
+    grid-column: 3 / 4;
+    text-align: right;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
